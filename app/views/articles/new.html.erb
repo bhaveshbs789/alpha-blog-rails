@@ -1,6 +1,7 @@
 <h1>A new article entry page</h1>
 
 <% if @article.errors.any? %>
+<h2>The following error need attention : </h2>
 <ul>
   <% @article.errors.full_messages.each do |msg| %>
     <li><%= msg %></li>
