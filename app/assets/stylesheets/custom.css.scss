@@ -1,2 +1,60 @@
+//$navbar-default-bg : #848d9b;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #5F4586;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #5EBA7D;
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+  
+}
+
+.jumbotron {
+  background-image: asset-url('books-1655783_1920.jpg');
+  background-size: cover;
+  height: 700px;
+}
+
+#clr {
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+footer {
+  margin-top: 40px;
+  color: #777;
+  border-top: 1px solid #eaeaea;
+}
+
+
+footer li {
+  list-style: none;
+  font-size: 0.9em;
+  
+}
+
+footer a:hover {
+  color: green;
+  text-decoration: none;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+}
