@@ -1,13 +1,6 @@
 <!-------------------below is the error handling / show section ------------------>
-<% if @article.errors.any? %>
-<h2>The following error need attention : </h2>
-<ul>
-  <% @article.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
-  <% end %>
-</ul>
-  
-<% end %>
+
+<%= render 'shared/errors', obj: @article%> <!--render the _errors.html.erb file under the views/shared section------->
 
 <!-------------------above are the errors------------------>
 
@@ -28,7 +21,7 @@
         <%= f.label :description %>
       </div>
       <div class="col-md-8">
-        <%= f.text_area :title, rows: 20, class: "form-control", placeholder: "Description for the Article" %>
+        <%= f.text_area :description, rows: 20, class: "form-control one_text_area", placeholder: "Description for the Article" %>
       </div>
       
     </div>
