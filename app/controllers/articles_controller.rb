@@ -11,8 +11,10 @@ class ArticlesController < ApplicationController
   end
   
   def create
+    debugger
     #render plain: params[:article].inspect=============rendering of the data entered in Title and description------
     @article = Article.new(article_params)
+    @article.user = User.first
     if @article.save
       #something
       flash[:success] = "Article was successfully Created!"
