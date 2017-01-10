@@ -1,0 +1,52 @@
+<h1 align="center">Sign Up</h1>
+
+<!-------------------below is the error handling / show section ------------------>
+
+<%= render 'shared/errors', obj: @user %> <!--render the _errors.html.erb file under the views/shared section------->
+
+<!-------------------above are the errors------------------>
+
+<div class="row">
+  <div class="col-md-12">
+    <%= form_for(@user, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+    <div class="form-group">
+      <div class="control-label col-md-2">
+        <%= f.label :username %>
+      </div>
+      <div class="col-md-8">
+        <%= f.text_field :username, class: "form-control", placeholder: "Enter a Username", autofocus: true %>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <div class="control-label col-md-2">
+        <%= f.label :email %>
+      </div>
+      <div class="col-md-8">
+        <%= f.email_field :email, class: "form-control one_text_area", placeholder: "Enter E-mail ID" %>
+      </div>
+      
+    </div>
+    
+    <div class="form-group">
+      <div class="control-label col-md-2">
+        <%= f.label :password %>
+      </div>
+      <div class="col-md-8">
+        <%= f.password_field :password, class: "form-control one_text_area", placeholder: "Enter password" %>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <div class="col-md-offset-2 col-md-10">
+       <%= f.submit "Sign Up", class: "btn btn-primary" %> 
+      </div>
+    </div>
+    
+    <% end %>
+    <div class="col-md-offset-2">
+      [ <%= link_to "Cancel and Return to Articles List", articles_path %> ]
+    </div>
+    
+  </div>
+</div>
